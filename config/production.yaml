@@ -1,0 +1,5 @@
+---
+
+logger:
+  console:
+    level: info

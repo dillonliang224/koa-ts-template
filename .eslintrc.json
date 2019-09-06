@@ -1,0 +1,79 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true,
+        "allowHigherOrderFunctions": true
+      }
+    ],
+    // 禁止未使用过的变量  https://cn.eslint.org/docs/rules/no-unused-vars
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none",
+        "caughtErrors": "all",
+        "caughtErrorsIgnorePattern": "^ignore"
+      }
+    ],
+    // 要求使用骆驼拼写法 (camelcase) https://cn.eslint.org/docs/rules/camelcase
+    // "camelcase": "error",
+    // 禁止定义前使用  https://cn.eslint.org/docs/rules/no-use-before-define
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "classes": true,
+        "functions": false,
+        "variables": false
+      }
+    ],
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md
+    "@typescript-eslint/interface-name-prefix": ["error", "always"],
+    // 强制在花括号中使用一致的空格 https://cn.eslint.org/docs/rules/object-curly-spacing
+    "object-curly-spacing": ["error", "always"],
+    // 强制函数中的变量在一起声明或分开声明 https://cn.eslint.org/docs/rules/one-var
+    // "one-var": ["error", "initialized: never"],
+    // 要求或禁止在变量声明周围换行  https://cn.eslint.org/docs/rules/one-var-declaration-per-line
+    "one-var-declaration-per-line": ["error"],
+    // 强制操作符使用一致的换行符风格  https://cn.eslint.org/docs/rules/operator-linebreak
+    "operator-linebreak": ["error", "after"],
+    // 建议使用const https://cn.eslint.org/docs/rules/prefer-const
+    // "prefer-const": ["error", "ignoreReadBeforeAssign: true"],
+    // 强制使用一致的反勾号、双引号或单引号 https://cn.eslint.org/docs/rules/quotes
+    // "quotes": ["error", "single", "avoidEscape: true"],
+    // 要求对象字面量属性名称使用引号 https://cn.eslint.org/docs/rules/quote-props
+    "quote-props": ["error", "consistent"],
+    // 强制剩余和扩展运算符及其表达式之间有空格 https://cn.eslint.org/docs/rules/rest-spread-spacing
+    "rest-spread-spacing": ["error"],
+    // 要求或禁止使用分号代替 ASI https://cn.eslint.org/docs/rules/semi "@typescript-eslint/semi": ["error", "always"]
+    "semi": ["error", "always"],
+    // 强制分号前后有空格  https://cn.eslint.org/docs/rules/semi-spacing
+    "semi-spacing": ["error"],
+    // https://github.com/typescript-eslint/typescript-eslint/blob/v2.0.0/packages/eslint-plugin/docs/rules/consistent-type-assertions.md
+    "@typescript-eslint/consistent-type-assertions": [
+      0,
+      {
+        "assertionStyle": "as"
+      }
+    ],
+    // 不允许空方法 https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "error"
+  }
+}

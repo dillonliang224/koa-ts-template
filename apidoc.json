@@ -1,0 +1,11 @@
+{
+  "name": "koa typescript template",
+  "version": "0.1.0",
+  "description": "a project with koa typescript",
+  "title": "apidoc",
+  "url": "",
+  "header": {
+    "title": "统一说明",
+    "filename": "apidoc-header.md"
+  }
+}

@@ -1,0 +1,5 @@
+---
+## 改为相应的项目名
+LOGGER_APP_NAME: koa-ts-template
+LOGGER_WORKER_NAME: koa-ts-template-worker
+

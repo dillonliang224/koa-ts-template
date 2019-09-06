@@ -1,0 +1,29 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# For vim: https://github.com/editorconfig/editorconfig-vim#readme
+
+# top-most EditorConfig file
+root = true                     # 根目录
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf                # 换行格式
+insert_final_newline = true     # 在代码最后添加一行空行
+trim_trailing_whitespace = true # 去除行末尾多余的空白
+charset = utf-8                 # 字符编码
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab              # 缩进格式
+
+[{**.ts,**.js}]
+indent_style = space            # 缩进格式
+indent_size = 4                 # 使用2个空格缩进
+quote_type = single
+
+[**.json]
+indent_style = space            # 缩进格式
+indent_size = 2                 # 使用2个空格缩进
+
+[*.md]
+trim_trailing_whitespace = false

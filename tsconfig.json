@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "./dist/", //重定向输出目录。
+    "declaration": true,
+    "target": "es5", //目标代码类型
+    "sourceMap": true, //用于debug
+    "module": "commonjs", // 模块系统
+    "moduleResolution": "node", // 选择模块解析策略： 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
+    "noImplicitAny": true,
+    "lib": [ // 要那些 lib，按需选择即可
+      "es2016"
+    ],
+    "typeRoots": [ // 指定库的搜索路径，这个比较有用，一般会指定 @types，还可以按需添加
+      "./node_modules/@types/"
+    ],
+    "types": [
+      "node",
+    ],
+    "baseUrl": "./", // 声明.d.ts文件
+    "paths": {
+      "*": ["types/*"]
+    }
+  },
+  "include": [ // file include会算出一个交集, 指明哪些是项目的 ts 文件
+    "src/**/*"
+  ],
+  "exclude": [ // 排除项目下面不符合要求的文件，这个按需设定即可，可以放心排除乱七八糟的文件
+    "node_modules",
+    "**/*.spec.ts",
+    "*.js"
+  ]
+}
